@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DisplayViewController.h
 //  OperationQueue
 //
 //  Created by Naveen Katari on 16/10/15.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface DisplayViewController : UITableViewController
 
+@property (nonatomic, strong) NSDictionary *dictionaryImages;
 
 @end
-

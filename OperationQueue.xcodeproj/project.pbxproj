@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D0EF41D31BDE0D4800C2DCDB /* SDWebImage-master in Resources */ = {isa = PBXBuildFile; fileRef = D0EF41D21BDE0D4800C2DCDB /* SDWebImage-master */; };
 		D0F5BEB01BD0DA07002ED238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEAF1BD0DA07002ED238 /* main.m */; };
 		D0F5BEB31BD0DA07002ED238 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEB21BD0DA07002ED238 /* AppDelegate.m */; };
-		D0F5BEB61BD0DA07002ED238 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEB51BD0DA07002ED238 /* ViewController.m */; };
+		D0F5BEB61BD0DA07002ED238 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEB51BD0DA07002ED238 /* MainViewController.m */; };
 		D0F5BEB91BD0DA07002ED238 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0F5BEB71BD0DA07002ED238 /* Main.storyboard */; };
 		D0F5BEBB1BD0DA07002ED238 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0F5BEBA1BD0DA07002ED238 /* Images.xcassets */; };
 		D0F5BEBE1BD0DA07002ED238 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0F5BEBC1BD0DA07002ED238 /* LaunchScreen.xib */; };
 		D0F5BECA1BD0DA07002ED238 /* OperationQueueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEC91BD0DA07002ED238 /* OperationQueueTests.m */; };
+		D0F5BED81BD0F6D4002ED238 /* ImageDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BED71BD0F6D4002ED238 /* ImageDetails.m */; };
+		D0F5BEDB1BD0F802002ED238 /* TrackStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEDA1BD0F802002ED238 /* TrackStatus.m */; };
+		D0F5BEE11BD126A9002ED238 /* DownloadImages.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEE01BD126A9002ED238 /* DownloadImages.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +31,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D0EF41D21BDE0D4800C2DCDB /* SDWebImage-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SDWebImage-master"; sourceTree = "<group>"; };
 		D0F5BEAA1BD0DA07002ED238 /* OperationQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OperationQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F5BEAE1BD0DA07002ED238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F5BEAF1BD0DA07002ED238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0F5BEB11BD0DA07002ED238 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0F5BEB21BD0DA07002ED238 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D0F5BEB41BD0DA07002ED238 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D0F5BEB51BD0DA07002ED238 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D0F5BEB41BD0DA07002ED238 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D0F5BEB51BD0DA07002ED238 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		D0F5BEB81BD0DA07002ED238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0F5BEBA1BD0DA07002ED238 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0F5BEBD1BD0DA07002ED238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D0F5BEC31BD0DA07002ED238 /* OperationQueueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OperationQueueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F5BEC81BD0DA07002ED238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F5BEC91BD0DA07002ED238 /* OperationQueueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OperationQueueTests.m; sourceTree = "<group>"; };
+		D0F5BED61BD0F6D4002ED238 /* ImageDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetails.h; sourceTree = "<group>"; };
+		D0F5BED71BD0F6D4002ED238 /* ImageDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetails.m; sourceTree = "<group>"; };
+		D0F5BED91BD0F802002ED238 /* TrackStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackStatus.h; sourceTree = "<group>"; };
+		D0F5BEDA1BD0F802002ED238 /* TrackStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackStatus.m; sourceTree = "<group>"; };
+		D0F5BEDF1BD126A9002ED238 /* DownloadImages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadImages.h; sourceTree = "<group>"; };
+		D0F5BEE01BD126A9002ED238 /* DownloadImages.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadImages.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +74,7 @@
 		D0F5BEA11BD0DA06002ED238 = {
 			isa = PBXGroup;
 			children = (
+				D0EF41D21BDE0D4800C2DCDB /* SDWebImage-master */,
 				D0F5BEAC1BD0DA07002ED238 /* OperationQueue */,
 				D0F5BEC61BD0DA07002ED238 /* OperationQueueTests */,
 				D0F5BEAB1BD0DA07002ED238 /* Products */,
@@ -83,12 +95,18 @@
 			children = (
 				D0F5BEB11BD0DA07002ED238 /* AppDelegate.h */,
 				D0F5BEB21BD0DA07002ED238 /* AppDelegate.m */,
-				D0F5BEB41BD0DA07002ED238 /* ViewController.h */,
-				D0F5BEB51BD0DA07002ED238 /* ViewController.m */,
+				D0F5BEB41BD0DA07002ED238 /* MainViewController.h */,
+				D0F5BEB51BD0DA07002ED238 /* MainViewController.m */,
 				D0F5BEB71BD0DA07002ED238 /* Main.storyboard */,
 				D0F5BEBA1BD0DA07002ED238 /* Images.xcassets */,
+				D0F5BED61BD0F6D4002ED238 /* ImageDetails.h */,
+				D0F5BED71BD0F6D4002ED238 /* ImageDetails.m */,
 				D0F5BEBC1BD0DA07002ED238 /* LaunchScreen.xib */,
 				D0F5BEAD1BD0DA07002ED238 /* Supporting Files */,
+				D0F5BED91BD0F802002ED238 /* TrackStatus.h */,
+				D0F5BEDA1BD0F802002ED238 /* TrackStatus.m */,
+				D0F5BEDF1BD126A9002ED238 /* DownloadImages.h */,
+				D0F5BEE01BD126A9002ED238 /* DownloadImages.m */,
 			);
 			path = OperationQueue;
 			sourceTree = "<group>";
@@ -201,6 +219,7 @@
 			files = (
 				D0F5BEB91BD0DA07002ED238 /* Main.storyboard in Resources */,
 				D0F5BEBE1BD0DA07002ED238 /* LaunchScreen.xib in Resources */,
+				D0EF41D31BDE0D4800C2DCDB /* SDWebImage-master in Resources */,
 				D0F5BEBB1BD0DA07002ED238 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,8 +238,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0F5BEB61BD0DA07002ED238 /* ViewController.m in Sources */,
+				D0F5BEDB1BD0F802002ED238 /* TrackStatus.m in Sources */,
+				D0F5BEB61BD0DA07002ED238 /* MainViewController.m in Sources */,
 				D0F5BEB31BD0DA07002ED238 /* AppDelegate.m in Sources */,
+				D0F5BEE11BD126A9002ED238 /* DownloadImages.m in Sources */,
+				D0F5BED81BD0F6D4002ED238 /* ImageDetails.m in Sources */,
 				D0F5BEB01BD0DA07002ED238 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +438,7 @@
 				D0F5BECF1BD0DA07002ED238 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0F5BED01BD0DA07002ED238 /* Build configuration list for PBXNativeTarget "OperationQueueTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +447,7 @@
 				D0F5BED21BD0DA07002ED238 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
