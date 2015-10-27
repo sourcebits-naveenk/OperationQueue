@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		D0EF41D31BDE0D4800C2DCDB /* SDWebImage-master in Resources */ = {isa = PBXBuildFile; fileRef = D0EF41D21BDE0D4800C2DCDB /* SDWebImage-master */; };
+		D0EF422F1BDF341F00C2DCDB /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF422D1BDF341F00C2DCDB /* TableViewCell.m */; };
+		D0EF42301BDF341F00C2DCDB /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EF422E1BDF341F00C2DCDB /* TableViewCell.xib */; };
 		D0F5BEB01BD0DA07002ED238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEAF1BD0DA07002ED238 /* main.m */; };
 		D0F5BEB31BD0DA07002ED238 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEB21BD0DA07002ED238 /* AppDelegate.m */; };
 		D0F5BEB61BD0DA07002ED238 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEB51BD0DA07002ED238 /* MainViewController.m */; };
@@ -32,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		D0EF41D21BDE0D4800C2DCDB /* SDWebImage-master */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "SDWebImage-master"; sourceTree = "<group>"; };
+		D0EF422C1BDF341F00C2DCDB /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		D0EF422D1BDF341F00C2DCDB /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		D0EF422E1BDF341F00C2DCDB /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		D0F5BEAA1BD0DA07002ED238 /* OperationQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OperationQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F5BEAE1BD0DA07002ED238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F5BEAF1BD0DA07002ED238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -107,6 +112,9 @@
 				D0F5BEDA1BD0F802002ED238 /* TrackStatus.m */,
 				D0F5BEDF1BD126A9002ED238 /* DownloadImages.h */,
 				D0F5BEE01BD126A9002ED238 /* DownloadImages.m */,
+				D0EF422C1BDF341F00C2DCDB /* TableViewCell.h */,
+				D0EF422D1BDF341F00C2DCDB /* TableViewCell.m */,
+				D0EF422E1BDF341F00C2DCDB /* TableViewCell.xib */,
 			);
 			path = OperationQueue;
 			sourceTree = "<group>";
@@ -218,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0F5BEB91BD0DA07002ED238 /* Main.storyboard in Resources */,
+				D0EF42301BDF341F00C2DCDB /* TableViewCell.xib in Resources */,
 				D0F5BEBE1BD0DA07002ED238 /* LaunchScreen.xib in Resources */,
 				D0EF41D31BDE0D4800C2DCDB /* SDWebImage-master in Resources */,
 				D0F5BEBB1BD0DA07002ED238 /* Images.xcassets in Resources */,
@@ -238,6 +247,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0EF422F1BDF341F00C2DCDB /* TableViewCell.m in Sources */,
 				D0F5BEDB1BD0F802002ED238 /* TrackStatus.m in Sources */,
 				D0F5BEB61BD0DA07002ED238 /* MainViewController.m in Sources */,
 				D0F5BEB31BD0DA07002ED238 /* AppDelegate.m in Sources */,

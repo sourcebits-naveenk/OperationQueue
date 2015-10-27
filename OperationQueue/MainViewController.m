@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "TableViewCell.h"
 
 @interface ViewController ()
 @property (nonatomic,strong) NSOperationQueue *operationQueue;
@@ -18,24 +19,19 @@ NSMutableArray *arrUserNames;
 NSArray *tempArray;
 NSDictionary *dictImages;
 NSInteger *rowCount;
-static NSUInteger imageIndex;
 BOOL isLoaded;
 @implementation ViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    imageIndex = 0;
-    
+    //Registering Nib of TableViewCell
+    [_tableViewUsername registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"CustomCell"];
     self.operationQueue = [[ NSOperationQueue alloc] init ];
-    //   NSInvocationOperation *operation = [[NSInvocationOperation alloc]initWithTarget:self selector:@selector(downloadImages) object:nil];
-    //   [self.operationQueue addOperation:operation];
-    //    [self beginDownloadingData];
-    
     NSString *tempUserName;
-    
+    //Initialize arrUserNames Array
     arrUserNames = [[NSMutableArray alloc]init];
+    //Loop generates user id from user1 to user 100
     for(NSInteger i = 1; i <=100; i++ )
     {
         
@@ -43,6 +39,7 @@ BOOL isLoaded;
         
         [ arrUserNames addObject:tempUserName];
     }
+    //Storing the URLs into dictionary with url as key
     
     NSMutableDictionary  *dictUrl1 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"http://www.robots.ox.ac.uk/~vgg/research/flowers_demo/images/flower_1.jpg",@"url", nil];
     NSMutableDictionary  *dictUrl2 = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"http://www.robots.ox.ac.uk/~vgg/research/flowers_demo/images/flower_2.jpg",@"url", nil];
@@ -81,31 +78,33 @@ BOOL isLoaded;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"CellIdentifier";
-    UITableViewCell *cell = [_tableViewUsername dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"CustomCell";
+    TableViewCell *cell = (TableViewCell *)[_tableViewUsername dequeueReusableCellWithIdentifier:CellIdentifier];
     NSDate *object = arrURL[indexPath.row];
     rowCount = indexPath.row;
-    cell.textLabel.text = [arrUserNames objectAtIndex:indexPath.row];
+    cell.userName.text = [arrUserNames objectAtIndex:indexPath.row];
     
-    if ([object valueForKey:@"status"]) {
+    if ([object valueForKey:@"status"])
+    {
         if([[object valueForKey:@"status"]isEqualToString:@"completed"] && [object valueForKey: @"image"]  && [[object valueForKey: @"image"] isKindOfClass:[UIImage class]])
         {
-            cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
-            cell.imageView.image = [object valueForKey:@"image" ];
+            cell.customImageView.contentMode = UIViewContentModeScaleToFill;
+            cell.customImageView.image = [object valueForKey:@"image" ];
             cell.accessoryType = UITableViewCellAccessoryCheckmark;
         }
     }
     else
     {
         [object setValue:@"inprogress" forKey:@"status"];
-       // NSTimer *atimer = [NSTimer scheduledTimerWithTimeInterval:<#(NSTimeInterval)#> target:<#(id)#> selector:<#(SEL)#> userInfo:<#(id)#> repeats:<#(BOOL)#>]
-        [self.operationQueue addOperationWithBlock:^{
+        [self.operationQueue addOperationWithBlock:^
+        {
             UIImage * image = [UIImage imageWithData:[NSData dataWithContentsOfURL:
                                                       [NSURL URLWithString:[object valueForKey:@"url"]]]];
             [object setValue:image forKey:@"image"];
             [object setValue:@"completed" forKey:@"status"];
             //count set
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^
+            {
             [_tableViewUsername reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationRight];
             }];
         }];
@@ -114,13 +113,10 @@ BOOL isLoaded;
     
     return cell;
 }
-
 - (IBAction)btnLoadMore:(id)sender
 {
     [arrURL addObjectsFromArray:tempArray];
     [_tableViewUsername reloadData];
 }
-
-
 @end
 
