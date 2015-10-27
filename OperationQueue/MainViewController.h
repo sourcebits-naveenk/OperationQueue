@@ -7,12 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ImageDetails.h"
+#import "TableViewCell.h"
+#import "UserDetails.h"
+
 
 @interface ViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UIButton *btnLoadMore;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewUsername;
-@property (nonatomic, strong) NSMutableDictionary *dictionaryUserImages;
+@property (strong, nonatomic) ImageDetails *objImageDetails;
+@property (strong, nonatomic) UserDetails *objUserDetails;
 
 @end
 

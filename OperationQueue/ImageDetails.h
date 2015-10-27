@@ -11,9 +11,7 @@
 
 @interface ImageDetails : NSObject
 
-@property (nonatomic, strong) NSString *stringImageName;
-@property (nonatomic, strong) UIImage *images;
-@property (nonatomic, strong) NSURL *urlImage;
-@property (nonatomic, assign) BOOL *isFailed;
+@property (nonatomic, strong) NSMutableArray *arrURL;
+-(void) getArrayWithUrl;
 
 @end
