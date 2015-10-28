@@ -17,12 +17,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //Registering Nib of TableViewCell
-    _objUserDetails = [[UserDetails alloc]init];
-    _objImageDetails = [[ImageDetails alloc]init];
-    [_objUserDetails generateUserNameString];
-    [_objImageDetails getArrayWithUrl];
-    
+   //Initializing modal class objects and calling the methods from those classes
+    _objUserDetailsManager = [[UserDetailsManager alloc]init];
+    _objImageDetailsManager = [[ImageDetailsManager alloc]init];
+    [_objUserDetailsManager generateUserNameString];
+    [_objImageDetailsManager getArrayWithUrl];
+     //Registering Nib of TableViewCell
     [_tableViewUsername registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"CustomCell"];
     self.operationQueue = [[ NSOperationQueue alloc] init ];
    
@@ -44,7 +44,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return[_objImageDetails.arrURL count];
+    return[_objImageDetailsManager.arrURL count];
 }
 
 
@@ -52,8 +52,8 @@
 {
     static NSString *CellIdentifier = @"CustomCell";
     TableViewCell *cell = (TableViewCell *)[_tableViewUsername dequeueReusableCellWithIdentifier:CellIdentifier];
-    NSDate *object = _objImageDetails.arrURL[indexPath.row];
-    cell.userName.text = [_objUserDetails.arrUserNames objectAtIndex:indexPath.row];
+    NSDate *object = _objImageDetailsManager.arrURL[indexPath.row];
+    cell.userName.text = [_objUserDetailsManager.generateUserNameString objectAtIndex:indexPath.row];
     if ([object valueForKey:@"status"])
     {
         if([[object valueForKey:@"status"]isEqualToString:@"completed"] && [object valueForKey: @"image"]  && [[object valueForKey: @"image"] isKindOfClass:[UIImage class]])
@@ -83,7 +83,7 @@
 }
 - (IBAction)btnLoadMore:(id)sender
 {
-    [_objImageDetails.arrURL addObjectsFromArray:_objImageDetails.arrURL];
+    [_objImageDetailsManager.arrURL addObjectsFromArray:_objImageDetailsManager.arrURL];
     [_tableViewUsername reloadData];
 }
 @end

@@ -10,18 +10,5 @@
 
 @implementation UserDetails
 
-//MEthod generate the strings from User1 to User100
-
--(void) generateUserNameString
-{
-      _arrUserNames = [[NSMutableArray alloc ]init];
-    for(int i = 1; i <=100; i++ )
-    {
-        
-        _userName = [ NSString stringWithFormat:@"User%d",i];
-        
-        [self.arrUserNames addObject:_userName];
-    }
-}
 
 @end

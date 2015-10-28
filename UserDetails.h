@@ -12,6 +12,5 @@
 
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSMutableArray *arrUserNames;
--(void) generateUserNameString;
 
 @end
