@@ -11,7 +11,6 @@
 		D0EF42301BDF341F00C2DCDB /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0EF422E1BDF341F00C2DCDB /* TableViewCell.xib */; };
 		D0EF42D51BDF918C00C2DCDB /* UserDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF42D41BDF918C00C2DCDB /* UserDetails.m */; };
 		D0EF42DF1BE09AA100C2DCDB /* UserDetailsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF42DE1BE09AA100C2DCDB /* UserDetailsManager.m */; };
-		D0EF42E21BE0A1A300C2DCDB /* ImageDetailsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EF42E11BE0A1A300C2DCDB /* ImageDetailsManager.m */; };
 		D0F5BEB01BD0DA07002ED238 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEAF1BD0DA07002ED238 /* main.m */; };
 		D0F5BEB31BD0DA07002ED238 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEB21BD0DA07002ED238 /* AppDelegate.m */; };
 		D0F5BEB61BD0DA07002ED238 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0F5BEB51BD0DA07002ED238 /* MainViewController.m */; };
@@ -39,8 +38,6 @@
 		D0EF42D41BDF918C00C2DCDB /* UserDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetails.m; sourceTree = "<group>"; };
 		D0EF42DD1BE09AA100C2DCDB /* UserDetailsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsManager.h; sourceTree = "<group>"; };
 		D0EF42DE1BE09AA100C2DCDB /* UserDetailsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsManager.m; sourceTree = "<group>"; };
-		D0EF42E01BE0A1A300C2DCDB /* ImageDetailsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageDetailsManager.h; sourceTree = "<group>"; };
-		D0EF42E11BE0A1A300C2DCDB /* ImageDetailsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageDetailsManager.m; sourceTree = "<group>"; };
 		D0F5BEAA1BD0DA07002ED238 /* OperationQueue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OperationQueue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0F5BEAE1BD0DA07002ED238 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D0F5BEAF1BD0DA07002ED238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -89,8 +86,6 @@
 			children = (
 				D0EF42DD1BE09AA100C2DCDB /* UserDetailsManager.h */,
 				D0EF42DE1BE09AA100C2DCDB /* UserDetailsManager.m */,
-				D0EF42E01BE0A1A300C2DCDB /* ImageDetailsManager.h */,
-				D0EF42E11BE0A1A300C2DCDB /* ImageDetailsManager.m */,
 			);
 			name = Controller;
 			path = ..;
@@ -281,7 +276,6 @@
 				D0F5BEB61BD0DA07002ED238 /* MainViewController.m in Sources */,
 				D0F5BEB31BD0DA07002ED238 /* AppDelegate.m in Sources */,
 				D0EF42DF1BE09AA100C2DCDB /* UserDetailsManager.m in Sources */,
-				D0EF42E21BE0A1A300C2DCDB /* ImageDetailsManager.m in Sources */,
 				D0EF42D51BDF918C00C2DCDB /* UserDetails.m in Sources */,
 				D0F5BEB01BD0DA07002ED238 /* main.m in Sources */,
 			);

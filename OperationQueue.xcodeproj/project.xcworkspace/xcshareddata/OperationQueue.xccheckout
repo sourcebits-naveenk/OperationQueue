@@ -20,7 +20,7 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>551804E69234D7516416358FD0830B7638845C23</key>
-		<string>../..OperationQueue/</string>
+		<string>../..OperationQueue</string>
 		<key>B004F806A6A7FC61EE2EABB09862AFA14B43E2C8</key>
 		<string>../..</string>
 	</dict>
@@ -46,7 +46,7 @@
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>551804E69234D7516416358FD0830B7638845C23</string>
 			<key>IDESourceControlWCCName</key>
-			<string>OperationQueue</string>
+			<string>OperationQueueOperationQueue</string>
 		</dict>
 	</array>
 </dict>

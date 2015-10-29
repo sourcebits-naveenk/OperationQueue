@@ -7,12 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ImageDetails.h"
 
 @interface ImageDetailsManager : NSObject
 
 @property (nonatomic, strong) NSMutableArray *arrURL;
 -(void) getArrayWithUrl;
-;
+
 
 @end

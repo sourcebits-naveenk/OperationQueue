@@ -11,6 +11,6 @@
 @interface UserDetails : NSObject
 
 @property (nonatomic, strong) NSString *userName;
-@property (nonatomic, strong) NSMutableArray *arrUserNames;
+@property (nonatomic, strong) NSString *userImageURL;
 
 @end

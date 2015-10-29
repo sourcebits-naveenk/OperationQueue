@@ -10,19 +10,30 @@
 
 @implementation UserDetailsManager
 
--(NSMutableArray *) generateUserNameString
+-(id) init
 {
-    _userDetail = [[UserDetails alloc]init];
-    _userDetail.arrUserNames = [[NSMutableArray alloc]init];
-    for(int i = 1; i <=100; i++ )
-    {
-        
-        _userDetail.userName = [ NSString stringWithFormat:@"User%d",i];
-        
-        [_userDetail.arrUserNames addObject:_userDetail.userName];
-    }
-    return _userDetail.arrUserNames;
+    
+    _arrUserNames = [[NSMutableArray alloc] initWithObjects:_userDetail, nil];
+    return self;
 }
+    int from =1;
+    int to = 10;
 
+-(NSMutableArray *) generateUserDetails
+{
+
+    for(int i = from; i <= to; i++ )
+    {
+        _userDetail = [[UserDetails alloc]init];
+        _userDetail.userName = [ NSString stringWithFormat:@"User%d", i];
+        _userDetail.userImageURL = [NSString stringWithFormat:@"http://www.robots.ox.ac.uk/~vgg/research/flowers_demo/images/flower_%d.jpg", (i% 10) + 1];
+     //Adding Userdetails objects to array
+        [_arrUserNames addObject:_userDetail];
+    }
+    
+    from = from + 10;
+    to = to + 10;
+    return _arrUserNames;
+}
 
 @end

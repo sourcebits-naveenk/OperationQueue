@@ -11,8 +11,8 @@
 
 @interface UserDetailsManager : NSObject
 
--(NSMutableArray *) generateUserNameString;
-
+-(NSMutableArray *) generateUserDetails;
+@property (nonatomic, strong) NSMutableArray *arrUserNames;
 @property UserDetails *userDetail;
 
 @end
