@@ -21,19 +21,22 @@
 
 -(NSMutableArray *) generateUserDetails
 {
-
+if(to <= 100)
+{
     for(int i = from; i <= to; i++ )
     {
         _userDetail = [[UserDetails alloc]init];
         _userDetail.userName = [ NSString stringWithFormat:@"User%d", i];
         _userDetail.userImageURL = [NSString stringWithFormat:@"http://www.robots.ox.ac.uk/~vgg/research/flowers_demo/images/flower_%d.jpg", (i% 10) + 1];
-     //Adding Userdetails objects to array
+        //Adding Userdetails objects to array
         [_arrUserNames addObject:_userDetail];
     }
     
     from = from + 10;
     to = to + 10;
-    return _arrUserNames;
+
+}
+        return _arrUserNames;
 }
 
 @end
