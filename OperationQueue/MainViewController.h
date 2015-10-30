@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *btnLoadMore;
 @property (weak, nonatomic) IBOutlet UITableView *tableViewUsername;
 @property (strong, nonatomic) UserDetailsManager *objUserDetailsManager;
-
+@property TableViewCell *tableViewCell;
+@property UserDetails *userDetail;
 @end
 

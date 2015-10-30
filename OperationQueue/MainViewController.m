@@ -8,26 +8,36 @@
 
 #import "MainViewController.h"
 #import "UserDetails.h"
+#import "UIImageView+WebCache.h"
 
 
 @interface ViewController ()
+{
+    
+    NSMutableArray *arrUserDetails;
+}
+
 @property (nonatomic,strong) NSOperationQueue *operationQueue;
 
 @end  
 
 @implementation ViewController
-
+int from = 1;
+int to = 10;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+  
    //Initializing modal class objects and calling the methods from those classes
-    _objUserDetailsManager = [[UserDetailsManager alloc]init];
-    [_objUserDetailsManager generateUserDetails];
+    arrUserDetails = [[NSMutableArray alloc]init];
+//    _objUserDetailsManager = [[UserDetailsManager alloc]init];
+//    [_objUserDetailsManager generateUserDetails];
      //Registering Nib of TableViewCell
     [_tableViewUsername registerNib:[UINib nibWithNibName:@"TableViewCell" bundle:nil] forCellReuseIdentifier:@"CustomCell"];
     self.operationQueue = [[ NSOperationQueue alloc] init ];
     
- //   _tableViewUsername.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    _tableViewUsername.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
+    [self generateUserDetails];
 //    _tableViewUsername.estimatedRowHeight = 44.0;
 //    _tableViewUsername.rowHeight = UITableViewAutomaticDimension;
 }
@@ -47,15 +57,17 @@
 {
     //NSInteger rowCount =[_objUserDetailsManager.generateUserDetails count];
     
-    return [ self.objUserDetailsManager.arrUserNames count ];
+    return [ arrUserDetails count ];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UserDetails *userDetails = [_objUserDetailsManager.arrUserNames objectAtIndex:indexPath.row];
+    //_tableViewCell = [[TableViewCell alloc]init];
+    UserDetails *userDetails = [arrUserDetails objectAtIndex:indexPath.row];
     static NSString *CellIdentifier = @"CustomCell";
     __weak TableViewCell *cell = (TableViewCell *)[_tableViewUsername dequeueReusableCellWithIdentifier:CellIdentifier];
+    cell.tag = indexPath.row;
 //    if(cell == nil)
 //    {
 //        cell = [[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier]];
@@ -68,13 +80,16 @@
     
     
     //cell.userName.text = [_objUserDetailsManager.generateUserDetails objectAtIndex:indexPath.row];
-    cell.userName.text = userDetails.userName;
+    
     //cell.customImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:userDetails.userImageURL]]];
     
     
     
-    
+    cell.userName.text = userDetails.userName;
     // Add an operation as a block to a queue
+    
+//    //--------------
+    
     [self.operationQueue addOperationWithBlock: ^ {
         
         NSURL *aURL = [NSURL URLWithString:userDetails.userImageURL];
@@ -82,7 +97,8 @@
         NSData *data = [NSData dataWithContentsOfURL:aURL options:nil error:&error];
         UIImage *image = nil;
     
-        if (data){
+        if (cell.tag == indexPath.row)
+        {
             image = [UIImage imageWithData:data];
             
             // Update UI on the main thread.
@@ -93,7 +109,7 @@
             }];
         }
     }];
-    
+//    //---------------
     
     
     
@@ -163,8 +179,30 @@
 }
 - (IBAction)btnLoadMore:(id)sender
 {
-    [_objUserDetailsManager generateUserDetails];
+    [self generateUserDetails];
     [self.tableViewUsername reloadData];
 }
+
+-(void) generateUserDetails
+{
+        if(to <= 100)
+        {
+            for(int i = from; i <= to; i++ )
+            {
+                _userDetail = [[UserDetails alloc]init];
+                _userDetail.userName = [ NSString stringWithFormat:@"User%d", i];
+                _userDetail.userImageURL = [NSString stringWithFormat:@"http://www.robots.ox.ac.uk/~vgg/research/flowers_demo/images/flower_%d.jpg", (i% 10) + 1];
+                //Adding Userdetails objects to array
+                [arrUserDetails addObject:_userDetail];
+            }
+            
+            from = from + 10;
+            to = to + 10;
+            
+        }
+
+}
 @end
+
+
 

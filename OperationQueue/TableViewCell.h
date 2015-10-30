@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "UserDetails.h"
 @interface TableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *customImageView;

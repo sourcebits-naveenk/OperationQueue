@@ -7,10 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface UserDetails : NSObject
 
 @property (nonatomic, strong) NSString *userName;
 @property (nonatomic, strong) NSString *userImageURL;
-
+@property UIImage *userImage;
 @end
