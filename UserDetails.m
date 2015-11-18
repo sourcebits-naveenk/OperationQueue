@@ -16,7 +16,6 @@
     
     if(self){
         
-        _userImage = nil;
         _userImageURL = nil;
         _userName = nil;
     }

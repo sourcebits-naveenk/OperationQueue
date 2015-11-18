@@ -66,49 +66,45 @@ int to = 10;
     //_tableViewCell = [[TableViewCell alloc]init];
     UserDetails *userDetails = [arrUserDetails objectAtIndex:indexPath.row];
     static NSString *CellIdentifier = @"CustomCell";
-    __weak TableViewCell *cell = (TableViewCell *)[_tableViewUsername dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.tag = indexPath.row;
-//    if(cell == nil)
-//    {
-//        cell = [[[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier]];
-//    }
+    TableViewCell *cell = (TableViewCell *)[_tableViewUsername dequeueReusableCellWithIdentifier:CellIdentifier];
 
-    
-    //NSMutableDictionary *object = [ NSMutableDictionary dictionaryWithObjectsAndKeys:userDetails.userImageURL,@"image", nil] ;
-    
-    //cell.userName.text = [_objUserDetailsManager.generateUserDetails objectAtIndex:indexPath.row];
-    
-    
-    //cell.userName.text = [_objUserDetailsManager.generateUserDetails objectAtIndex:indexPath.row];
-    
-    //cell.customImageView.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:userDetails.userImageURL]]];
-    
-    
-    
     cell.userName.text = userDetails.userName;
-    // Add an operation as a block to a queue
+    [cell.customImageView sd_setImageWithURL:[NSURL URLWithString:userDetails.userImageURL] placeholderImage:nil options:SDWebImageCacheMemoryOnly completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL){
+        if(image)
+        {
+            cell.customImageView.image = image;
+            cell.customImageView.contentMode = UIViewContentModeScaleToFill;
+            cell.accessoryType = UITableViewCellAccessoryCheckmark;
+
+        }
+        
+        
+    }];
+     return cell;
+     
+     
+        // Add an operation as a block to a queue
     
 //    //--------------
-    
-    [self.operationQueue addOperationWithBlock: ^ {
-        
-        NSURL *aURL = [NSURL URLWithString:userDetails.userImageURL];
-        NSError *error = nil;
-        NSData *data = [NSData dataWithContentsOfURL:aURL options:nil error:&error];
-        UIImage *image = nil;
-    
-        if (cell.tag == indexPath.row)
-        {
-            image = [UIImage imageWithData:data];
-            
-            // Update UI on the main thread.
-            [[NSOperationQueue mainQueue] addOperationWithBlock: ^ {
-                cell.customImageView.image = image;
-                cell.customImageView.contentMode = UIViewContentModeScaleToFill;
-                cell.accessoryType = UITableViewCellAccessoryCheckmark;
-            }];
-        }
-    }];
+//       [self.operationQueue addOperationWithBlock: ^ {
+//        
+//        NSURL *aURL = [NSURL URLWithString:userDetails.userImageURL];
+//        NSError *error = nil;
+//        NSData *data = [NSData dataWithContentsOfURL:aURL options:nil error:&error];
+//        UIImage *image = nil;
+//    
+//        if (data)
+//        {
+//            image = [UIImage imageWithData:data];
+//            
+//            // Update UI on the main thread.
+//            [[NSOperationQueue mainQueue] addOperationWithBlock: ^ {
+//                cell.customImageView.image = image;
+//                cell.customImageView.contentMode = UIViewContentModeScaleToFill;
+//                cell.accessoryType = UITableViewCellAccessoryCheckmark;
+//            }];
+//        }
+//    }];
 //    //---------------
     
     
@@ -175,7 +171,7 @@ int to = 10;
 //        }];
 //        
 //    }
-    return cell;
+    
 }
 - (IBAction)btnLoadMore:(id)sender
 {

@@ -94,8 +94,8 @@
 		D0F5BEAF1BD0DA07002ED238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D0F5BEB11BD0DA07002ED238 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D0F5BEB21BD0DA07002ED238 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D0F5BEB41BD0DA07002ED238 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
-		D0F5BEB51BD0DA07002ED238 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D0F5BEB41BD0DA07002ED238 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MainViewController.h; path = OperationQueue/MainViewController.h; sourceTree = "<group>"; };
+		D0F5BEB51BD0DA07002ED238 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainViewController.m; path = OperationQueue/MainViewController.m; sourceTree = "<group>"; };
 		D0F5BEB81BD0DA07002ED238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0F5BEBA1BD0DA07002ED238 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D0F5BEBD1BD0DA07002ED238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -136,6 +136,8 @@
 		D0EF42DC1BE09A8600C2DCDB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D0F5BEB41BD0DA07002ED238 /* MainViewController.h */,
+				D0F5BEB51BD0DA07002ED238 /* MainViewController.m */,
 				D0EF42DD1BE09AA100C2DCDB /* UserDetailsManager.h */,
 				D0EF42DE1BE09AA100C2DCDB /* UserDetailsManager.m */,
 			);
@@ -147,8 +149,6 @@
 			isa = PBXGroup;
 			children = (
 				D0EF42E51BE0AEE400C2DCDB /* Custom TableCell */,
-				D0F5BEB41BD0DA07002ED238 /* MainViewController.h */,
-				D0F5BEB51BD0DA07002ED238 /* MainViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
